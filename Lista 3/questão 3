@@ -1,1 +1,27 @@
+#include <iostream>
 
+int main() {
+    int numero, original, inverso = 0, digito;
+
+    // Solicita ao usuário que insira o número de cinco dígitos
+    std::cout << "Digite um número de cinco dígitos: ";
+    std::cin >> numero;
+
+    original = numero; // Armazena o número original para comparação posterior
+
+    // Extrai cada dígito do número e inverte-o
+    while (numero > 0) {
+        digito = numero % 10;
+        inverso = (inverso * 10) + digito;
+        numero /= 10;
+    }
+
+    // Verifica se o número original é igual ao número invertido
+    if (original == inverso) {
+        std::cout << "O número " << original << " é um palíndromo.\n";
+    } else {
+        std::cout << "O número " << original << " não é um palíndromo.\n";
+    }
+
+    return 0;
+}
