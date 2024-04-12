@@ -1,1 +1,31 @@
+#include <iostream>
 
+int main() {
+    // Array para armazenar os cinco números
+    int numeros[5];
+
+    // Solicita ao usuário que insira cinco números entre 1 e 30
+    std::cout << "Digite cinco números entre 1 e 30:" << std::endl;
+    for (int i = 0; i < 5; ++i) {
+        std::cout << "Número " << i + 1 << ": ";
+        std::cin >> numeros[i];
+
+        // Verifica se o número está dentro do intervalo permitido
+        while (numeros[i] < 1 || numeros[i] > 30) {
+            std::cout << "Número inválido! Por favor, insira um número entre 1 e 30: ";
+            std::cin >> numeros[i];
+        }
+    }
+
+    // Exibe as barras de asteriscos para cada número lido
+    std::cout << "Barras de asteriscos:" << std::endl;
+    for (int i = 0; i < 5; ++i) {
+        std::cout << "Número " << i + 1 << ": ";
+        for (int j = 0; j < numeros[i]; ++j) {
+            std::cout << "*";
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
