@@ -1,1 +1,41 @@
+#include <iostream>
+#include <iomanip>
 
+int main() {
+    double numero1, numero2;
+    char operador;
+
+    // Solicita ao usuário que insira dois números reais
+    std::cout << "Digite o primeiro número: ";
+    std::cin >> numero1;
+    std::cout << "Digite o segundo número: ";
+    std::cin >> numero2;
+
+    // Solicita ao usuário que insira um caractere representando a operação (+, -, * ou /)
+    std::cout << "Digite o operador (+, -, * ou /): ";
+    std::cin >> operador;
+
+    // Realiza a operação com base no operador fornecido usando a estrutura switch
+    switch (operador) {
+        case '+':
+            std::cout << "Resultado: " << std::fixed << std::setprecision(2) << numero1 << " + " << numero2 << " = " << numero1 + numero2 << std::endl;
+            break;
+        case '-':
+            std::cout << "Resultado: " << std::fixed << std::setprecision(2) << numero1 << " - " << numero2 << " = " << numero1 - numero2 << std::endl;
+            break;
+        case '*':
+            std::cout << "Resultado: " << std::fixed << std::setprecision(2) << numero1 << " * " << numero2 << " = " << numero1 * numero2 << std::endl;
+            break;
+        case '/':
+            if (numero2 != 0) {
+                std::cout << "Resultado: " << std::fixed << std::setprecision(2) << numero1 << " / " << numero2 << " = " << numero1 / numero2 << std::endl;
+            } else {
+                std::cout << "Erro: Divisão por zero não é permitida.\n";
+            }
+            break;
+        default:
+            std::cout << "Erro: Operador inválido.\n";
+    }
+
+    return 0;
+}
