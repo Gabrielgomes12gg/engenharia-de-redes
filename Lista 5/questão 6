@@ -1,1 +1,288 @@
+Letra A: 
+#include <iostream>
+using namespace std;
 
+// Função recursiva para resolver as Torres de Hanói
+void torresDeHanoi(int n, char origem, char destino, char temporaria) {
+    if (n == 1) {
+        cout << "Mover disco 1 de " << origem << " para " << destino << endl;
+        return;
+    }
+
+    // Mover n-1 discos da estaca de origem para a estaca temporária
+    torresDeHanoi(n - 1, origem, temporaria, destino);
+
+    // Mover o disco restante da estaca de origem para a estaca de destino
+    cout << "Mover disco " << n << " de " << origem << " para " << destino << endl;
+
+    // Mover os n-1 discos da estaca temporária para a estaca de destino
+    torresDeHanoi(n - 1, temporaria, destino, origem);
+}
+
+int main() {
+    int numDiscos = 3; // Número de discos
+    char estacaOrigem = 'A';
+    char estacaDestino = 'C';
+    char estacaTemporaria = 'B';
+
+    cout << "Para resolver as Torres de Hanoi para " << numDiscos << " discos:" << endl;
+    torresDeHanoi(numDiscos, estacaOrigem, estacaDestino, estacaTemporaria);
+
+    return 0;
+}
+Letra B: 
+#include <iostream>
+using namespace std;
+
+// Função recursiva para mover apenas o último disco da estaca de origem para a estaca de destino
+void moverUltimoDisco(int n, char origem, char destino, char temporaria) {
+    if (n == 1) {
+        cout << "Mover disco 1 de " << origem << " para " << destino << endl;
+        return;
+    }
+
+    // Mover n-1 discos da estaca de origem para a estaca temporária
+    moverUltimoDisco(n - 1, origem, temporaria, destino);
+    
+    // Mover o último disco da estaca de origem para a estaca de destino
+    cout << "Mover disco " << n << " de " << origem << " para " << destino << endl;
+}
+
+int main() {
+    int numDiscos = 3; // Número de discos
+    char estacaOrigem = 'A';
+    char estacaDestino = 'C';
+    char estacaTemporaria = 'B';
+
+    cout << "Para mover o último disco (o maior) da estaca 1 para a estaca 3:" << endl;
+    moverUltimoDisco(numDiscos, estacaOrigem, estacaDestino, estacaTemporaria);
+
+    return 0;
+}
+Letra C:
+#include <iostream>
+using namespace std;
+
+// Função recursiva para mover os discos da estaca origem para a estaca destino, usando a estaca temporária
+void moverDiscos(int n, char origem, char destino, char temporaria) {
+    if (n == 1) {
+        cout << "Mover disco 1 de " << origem << " para " << destino << endl;
+        return;
+    }
+
+    // Mover n-1 discos da estaca origem para a estaca temporária, usando a estaca destino como temporária
+    moverDiscos(n - 1, origem, temporaria, destino);
+    
+    // Mover o último disco da estaca origem para a estaca destino
+    cout << "Mover disco " << n << " de " << origem << " para " << destino << endl;
+
+    // Mover os n-1 discos da estaca temporária para a estaca destino, usando a estaca origem como temporária
+    moverDiscos(n - 1, temporaria, destino, origem);
+}
+
+int main() {
+    int numDiscos = 3; // Número de discos
+    char estacaOrigem = 'B'; // Estaca 2
+    char estacaDestino = 'C'; // Estaca 3
+    char estacaTemporaria = 'A'; // Estaca 1
+
+    cout << "Para mover os discos " << numDiscos - 1 << " da estaca 2 para a estaca 3, usando a estaca 1 como área temporária:" << endl;
+    moverDiscos(numDiscos - 1, estacaOrigem, estacaDestino, estacaTemporaria);
+
+    return 0;
+}
+Letra A:
+#include <iostream>
+using namespace std;
+
+// Função recursiva para resolver as Torres de Hanói
+void torresDeHanoi(int n, char origem, char destino, char temporaria) {
+    if (n == 1) {
+        cout << "Mover disco 1 de " << origem << " para " << destino << endl;
+        return;
+    }
+
+    // Mover n-1 discos da estaca de origem para a estaca temporária
+    torresDeHanoi(n - 1, origem, temporaria, destino);
+
+    // Mover o disco restante da estaca de origem para a estaca de destino
+    cout << "Mover disco " << n << " de " << origem << " para " << destino << endl;
+
+    // Mover os n-1 discos da estaca temporária para a estaca de destino
+    torresDeHanoi(n - 1, temporaria, destino, origem);
+}
+
+int main() {
+    int numDiscos;
+    cout << "Digite o número de discos: ";
+    cin >> numDiscos;
+
+    char estacaOrigem = 'A';
+    char estacaDestino = 'C';
+    char estacaTemporaria = 'B';
+
+    cout << "Para resolver as Torres de Hanoi com " << numDiscos << " discos:" << endl;
+    torresDeHanoi(numDiscos, estacaOrigem, estacaDestino, estacaTemporaria);
+
+    return 0;
+}
+Letra B:
+#include <iostream>
+using namespace std;
+
+// Função recursiva para resolver as Torres de Hanói
+void torresDeHanoi(int n, char origem, char destino, char temporaria, char estacaInicial) {
+    if (n == 1) {
+        cout << "Mover disco 1 de " << origem << " para " << destino << endl;
+        return;
+    }
+
+    // Mover n-1 discos da estaca de origem para a estaca temporária
+    torresDeHanoi(n - 1, origem, temporaria, destino, estacaInicial);
+
+    // Mover o disco restante da estaca de origem para a estaca de destino
+    cout << "Mover disco " << n << " de " << origem << " para " << destino << endl;
+
+    // Mover os n-1 discos da estaca temporária para a estaca de destino
+    torresDeHanoi(n - 1, temporaria, destino, origem, estacaInicial);
+}
+
+int main() {
+    int numDiscos;
+    cout << "Digite o número de discos: ";
+    cin >> numDiscos;
+
+    char estacaOrigem;
+    cout << "Digite a estaca inicial (A, B ou C): ";
+    cin >> estacaOrigem;
+
+    // Verificar se a entrada da estaca inicial é válida
+    if (estacaOrigem != 'A' && estacaOrigem != 'B' && estacaOrigem != 'C') {
+        cout << "Estaca inicial inválida!" << endl;
+        return 1;
+    }
+
+    // Determinar as estacas de destino e temporária
+    char estacaDestino = (estacaOrigem == 'A') ? 'B' : 'A';
+    char estacaTemporaria = 'C';
+
+    cout << "Para resolver as Torres de Hanoi com " << numDiscos << " discos a partir da estaca " << estacaOrigem << ":" << endl;
+    torresDeHanoi(numDiscos, estacaOrigem, estacaDestino, estacaTemporaria, estacaOrigem);
+
+    return 0;
+}
+Letra C: 
+#include <iostream>
+using namespace std;
+
+// Função recursiva para resolver as Torres de Hanói
+void torresDeHanoi(int n, char origem, char destino, char temporaria, char estacaInicial, char estacaFinal) {
+    if (n == 1) {
+        cout << "Mover disco 1 de " << origem << " para " << destino << endl;
+        return;
+    }
+
+    // Mover n-1 discos da estaca de origem para a estaca temporária
+    torresDeHanoi(n - 1, origem, temporaria, destino, estacaInicial, estacaFinal);
+
+    // Mover o disco restante da estaca de origem para a estaca de destino
+    cout << "Mover disco " << n << " de " << origem << " para " << destino << endl;
+
+    // Mover os n-1 discos da estaca temporária para a estaca de destino
+    torresDeHanoi(n - 1, temporaria, destino, origem, estacaInicial, estacaFinal);
+}
+
+int main() {
+    int numDiscos;
+    cout << "Digite o número de discos: ";
+    cin >> numDiscos;
+
+    char estacaOrigem;
+    cout << "Digite a estaca inicial (A, B ou C): ";
+    cin >> estacaOrigem;
+
+    // Verificar se a entrada da estaca inicial é válida
+    if (estacaOrigem != 'A' && estacaOrigem != 'B' && estacaOrigem != 'C') {
+        cout << "Estaca inicial inválida!" << endl;
+        return 1;
+    }
+
+    char estacaDestino;
+    cout << "Digite a estaca de destino (A, B ou C, diferente da estaca inicial): ";
+    cin >> estacaDestino;
+
+    // Verificar se a entrada da estaca de destino é válida
+    if ((estacaDestino != 'A' && estacaDestino != 'B' && estacaDestino != 'C') || estacaDestino == estacaOrigem) {
+        cout << "Estaca de destino inválida!" << endl;
+        return 1;
+    }
+
+    // Determinar a estaca temporária
+    char estacaTemporaria = 'A' + 'B' + 'C' - estacaOrigem - estacaDestino;
+
+    cout << "Para resolver as Torres de Hanoi com " << numDiscos << " discos a partir da estaca " << estacaOrigem << " para a estaca " << estacaDestino << ":" << endl;
+    torresDeHanoi(numDiscos, estacaOrigem, estacaDestino, estacaTemporaria, estacaOrigem, estacaDestino);
+
+    return 0;
+}
+Letra D:
+#include <iostream>
+using namespace std;
+
+// Função recursiva para resolver as Torres de Hanói e gerar as instruções de movimento
+void torresDeHanoi(int n, char origem, char destino, char temporaria) {
+    if (n == 1) {
+        cout << origem << " → " << destino << endl;
+        return;
+    }
+
+    // Mover n-1 discos da estaca de origem para a estaca temporária
+    torresDeHanoi(n - 1, origem, temporaria, destino);
+
+    // Mover o disco restante da estaca de origem para a estaca de destino
+    cout << origem << " → " << destino << endl;
+
+    // Mover os n-1 discos da estaca temporária para a estaca de destino
+    torresDeHanoi(n - 1, temporaria, destino, origem);
+}
+
+int main() {
+    int numDiscos;
+    cout << "Digite o número de discos: ";
+    cin >> numDiscos;
+
+    char estacaOrigem;
+    cout << "Digite a estaca inicial (A, B ou C): ";
+    cin >> estacaOrigem;
+
+    // Verificar se a entrada da estaca inicial é válida
+    if (estacaOrigem != 'A' && estacaOrigem != 'B' && estacaOrigem != 'C') {
+        cout << "Estaca inicial inválida!" << endl;
+        return 1;
+    }
+
+    char estacaDestino;
+    cout << "Digite a estaca de destino (A, B ou C, diferente da estaca inicial): ";
+    cin >> estacaDestino;
+
+    // Verificar se a entrada da estaca de destino é válida
+    if ((estacaDestino != 'A' && estacaDestino != 'B' && estacaDestino != 'C') || estacaDestino == estacaOrigem) {
+        cout << "Estaca de destino inválida!" << endl;
+        return 1;
+    }
+
+    char estacaTemporaria;
+    cout << "Digite a estaca temporária (A, B ou C, diferente das estacas inicial e de destino): ";
+    cin >> estacaTemporaria;
+
+    // Verificar se a entrada da estaca temporária é válida
+    if ((estacaTemporaria != 'A' && estacaTemporaria != 'B' && estacaTemporaria != 'C') || estacaTemporaria == estacaOrigem || estacaTemporaria == estacaDestino) {
+        cout << "Estaca temporária inválida!" << endl;
+        return 1;
+    }
+
+    cout << "Instruções precisas para mover os discos do ponto inicial para o ponto de destino:" << endl;
+    torresDeHanoi(numDiscos, estacaOrigem, estacaDestino, estacaTemporaria);
+
+    return 0;
+}
