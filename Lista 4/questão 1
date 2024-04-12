@@ -1,1 +1,27 @@
+#include <iostream>
 
+// Função para calcular o fatorial de um número inteiro não negativo
+unsigned long long fatorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        unsigned long long resultado = 1;
+        for (int i = 1; i <= n; ++i) {
+            resultado *= i;
+        }
+        return resultado;
+    }
+}
+
+int main() {
+    int n;
+
+    // Solicita ao usuário que insira o número para calcular o fatorial
+    std::cout << "Digite um número inteiro não negativo para calcular o fatorial: ";
+    std::cin >> n;
+
+    // Calcula o fatorial e exibe o resultado
+    std::cout << "O fatorial de " << n << " é: " << fatorial(n) << std::endl;
+
+    return 0;
+}
