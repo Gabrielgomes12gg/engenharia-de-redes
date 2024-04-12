@@ -1,1 +1,41 @@
+#include <iostream>
 
+int main() {
+    // Definição dos preços de varejo dos produtos
+    double precos[] = {2.98, 4.50, 9.98, 4.49, 6.87};
+
+    // Variável para armazenar o número do produto e a quantidade vendida
+    int numeroProduto;
+    int quantidadeVendida;
+
+    // Variável para armazenar o total de vendas
+    double totalVendas = 0.0;
+
+    // Loop para ler os pares de números
+    while (true) {
+        // Solicita ao usuário que insira o número do produto e a quantidade vendida
+        std::cout << "Digite o número do produto (-1 para encerrar): ";
+        std::cin >> numeroProduto;
+
+        // Verifica se o usuário deseja encerrar o programa
+        if (numeroProduto == -1) {
+            break; // Encerra o loop
+        }
+
+        std::cout << "Digite a quantidade vendida: ";
+        std::cin >> quantidadeVendida;
+
+        // Verifica se o número do produto é válido (entre 1 e 5)
+        if (numeroProduto >= 1 && numeroProduto <= 5) {
+            // Calcula o valor total de varejo para o produto vendido e adiciona ao total de vendas
+            totalVendas += precos[numeroProduto - 1] * quantidadeVendida;
+        } else {
+            std::cout << "Número do produto inválido. Por favor, insira um número de produto válido (1 a 5)." << std::endl;
+        }
+    }
+
+    // Exibe o total de vendas
+    std::cout << "O total de vendas é: R$ " << totalVendas << std::endl;
+
+    return 0;
+}
