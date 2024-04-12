@@ -1,1 +1,36 @@
+#include <iostream>
+#include <vector>
 
+int main() {
+    std::vector<double> litros;
+    std::vector<double> km;
+
+    int numEnchidas;
+    std::cout << "Quantas vezes você encheu o tanque? ";
+    std::cin >> numEnchidas;
+
+    // Entrada dos dados
+    for (int i = 0; i < numEnchidas; ++i) {
+        double litro, kmPercorrido;
+        std::cout << "Quantidade de litros na " << i+1 << "ª vez: ";
+        std::cin >> litro;
+        std::cout << "Quantidade de quilômetros percorridos na " << i+1 << "ª vez: ";
+        std::cin >> kmPercorrido;
+
+        litros.push_back(litro);
+        km.push_back(kmPercorrido);
+    }
+
+    // Cálculo do consumo de cada tanque e média
+    double consumoTotal = 0.0;
+    for (int i = 0; i < numEnchidas; ++i) {
+        double consumoPorTanque = km[i] / litros[i];
+        std::cout << "Consumo do tanque " << i+1 << ": " << consumoPorTanque << " km/litro\n";
+        consumoTotal += consumoPorTanque;
+    }
+
+    double mediaConsumo = consumoTotal / numEnchidas;
+    std::cout << "Média de consumo: " << mediaConsumo << " km/litro\n";
+
+    return 0;
+}
