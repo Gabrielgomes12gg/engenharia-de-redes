@@ -1,1 +1,41 @@
+#include <iostream>
+#include <vector>
+using namespace std;
 
+bool eh_perfeito(int numero) {
+    int soma = 0;
+
+    // Encontramos a soma dos divisores próprios do número
+    for (int i = 1; i < numero; i++) {
+        if (numero % i == 0) {
+            soma += i;
+        }
+    }
+
+    // Verificamos se a soma dos divisores próprios é igual ao número
+    return soma == numero;
+}
+
+int main() {
+    cout << "Numeros perfeitos entre 1 e 1000:" << endl;
+    for (int i = 1; i <= 1000; i++) {
+        if (eh_perfeito(i)) {
+            cout << i << " é um número perfeito. Fatores: ";
+            vector<int> fatores;
+            for (int j = 1; j < i; j++) {
+                if (i % j == 0) {
+                    fatores.push_back(j);
+                }
+            }
+            for (size_t k = 0; k < fatores.size(); k++) {
+                cout << fatores[k];
+                if (k != fatores.size() - 1) {
+                    cout << ", ";
+                }
+            }
+            cout << endl;
+        }
+    }
+
+    return 0;
+}
