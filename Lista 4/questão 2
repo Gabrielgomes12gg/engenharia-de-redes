@@ -1,33 +1,50 @@
 #include <iostream>
 
-// Função para calcular o fatorial de um número inteiro não negativo
-unsigned long long fatorial(int n) {
-    if (n == 0) {
-        return 1;
-    } else {
-        unsigned long long resultado = 1;
-        for (int i = 1; i <= n; ++i) {
-            resultado *= i;
-        }
-        return resultado;
-    }
-}
-
 int main() {
-    int n;
-
-    // Solicita ao usuário que insira um número inteiro não negativo
-    std::cout << "Digite um número inteiro não negativo para calcular o fatorial: ";
-    std::cin >> n;
-
-    // Verifica se o número fornecido é não negativo
-    if (n < 0) {
-        std::cout << "Erro: O número fornecido deve ser não negativo.\n";
-        return 1; // Saída do programa com erro
+    // Padrão 1: Linhas de asteriscos crescentes
+    std::cout << "Padrão 1:" << std::endl;
+    for (int linha = 1; linha <= 5; ++linha) {
+        for (int coluna = 1; coluna <= linha; ++coluna) {
+            std::cout << '*';
+        }
+        std::cout << '\n';
     }
 
-    // Calcula o fatorial e exibe o resultado
-    std::cout << "O fatorial de " << n << " é: " << fatorial(n) << std::endl;
+    std::cout << std::endl;
+
+    // Padrão 2: Linhas de asteriscos decrescentes
+    std::cout << "Padrão 2:" << std::endl;
+    for (int linha = 5; linha >= 1; --linha) {
+        for (int coluna = 1; coluna <= linha; ++coluna) {
+            std::cout << '*';
+        }
+        std::cout << '\n';
+    }
+
+    std::cout << std::endl;
+
+    // Padrão 3: Triângulo retângulo invertido
+    std::cout << "Padrão 3:" << std::endl;
+    for (int linha = 1; linha <= 5; ++linha) {
+        for (int espaco = 1; espaco < linha; ++espaco) {
+            std::cout << ' ';
+        }
+        for (int coluna = linha; coluna <= 5; ++coluna) {
+            std::cout << '*';
+        }
+        std::cout << '\n';
+    }
+
+    std::cout << std::endl;
+
+    // Padrão 4: Triângulo retângulo
+    std::cout << "Padrão 4:" << std::endl;
+    for (int linha = 1; linha <= 5; ++linha) {
+        for (int coluna = 1; coluna <= linha; ++coluna) {
+            std::cout << '*';
+        }
+        std::cout << '\n';
+    }
 
     return 0;
 }
