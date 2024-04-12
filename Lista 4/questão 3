@@ -1,25 +1,18 @@
 #include <iostream>
 
-double calcularE(int numTermos) {
-    double e = 1.0;
-    double termo = 1.0;
-
-    for (int i = 1; i <= numTermos; ++i) {
-        termo /= i;
-        e += termo;
-    }
-
-    return e;
-}
-
 int main() {
-    int numTermos = 10; // Aproximação usando os primeiros 10 termos
+    std::cout << "Triplos de Pitágoras com lados não superiores a 20:" << std::endl;
 
-    // Calcula o valor de e usando a série até 10 termos
-    double e = calcularE(numTermos);
-
-    // Exibe o valor aproximado de e
-    std::cout << "Valor aproximado de e com " << numTermos << " termos: " << e << std::endl;
+    for (int lado1 = 1; lado1 <= 20; ++lado1) {
+        for (int lado2 = 1; lado2 <= 20; ++lado2) {
+            for (int hipotenusa = 1; hipotenusa <= 20; ++hipotenusa) {
+                // Verifica se os lados formam um triângulo retângulo
+                if (lado1 * lado1 + lado2 * lado2 == hipotenusa * hipotenusa) {
+                    std::cout << "Lado1: " << lado1 << ", Lado2: " << lado2 << ", Hipotenusa: " << hipotenusa << std::endl;
+                }
+            }
+        }
+    }
 
     return 0;
 }
