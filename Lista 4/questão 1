@@ -1,3 +1,37 @@
+letra A:
+#include <iostream>
+
+unsigned long long calcularFatorial(int n) {
+    unsigned long long resultado = 1;
+
+    for (int i = 1; i <= n; ++i) {
+        resultado *= i;
+
+        // Verifica se ocorreu um estouro de memória
+        if (resultado < 0) {
+            std::cout << "Estouro de memória ocorreu ao calcular o fatorial de " << i << "!" << std::endl;
+            break;
+        }
+    }
+
+    return resultado;
+}
+
+int main() {
+    int n;
+
+    // Solicita ao usuário que insira um número inteiro não negativo
+    std::cout << "Digite um número inteiro não negativo para calcular o fatorial: ";
+    std::cin >> n;
+
+    // Calcula e imprime o fatorial
+    unsigned long long fatorial = calcularFatorial(n);
+    std::cout << "O fatorial de " << n << " é: " << fatorial << std::endl;
+
+    return 0;
+}
+
+Letra B: 
 #include <iostream>
 
 // Função para calcular o fatorial de um número inteiro não negativo
@@ -16,12 +50,51 @@ unsigned long long fatorial(int n) {
 int main() {
     int n;
 
-    // Solicita ao usuário que insira o número para calcular o fatorial
+    // Solicita ao usuário que insira um número inteiro não negativo
     std::cout << "Digite um número inteiro não negativo para calcular o fatorial: ";
     std::cin >> n;
 
+    // Verifica se o número fornecido é não negativo
+    if (n < 0) {
+        std::cout << "Erro: O número fornecido deve ser não negativo.\n";
+        return 1; // Saída do programa com erro
+    }
+
     // Calcula o fatorial e exibe o resultado
     std::cout << "O fatorial de " << n << " é: " << fatorial(n) << std::endl;
+
+    return 0;
+}
+
+Letra c:
+
+#include <iostream>
+
+double calcularPi(int numTermos) {
+    double pi = 0.0;
+    int sinal = 1;
+
+    for (int i = 0; i < numTermos; ++i) {
+        double termo = 1.0 / (2 * i + 1);
+        pi += sinal * termo;
+        sinal *= -1; // Alternar o sinal a cada termo
+    }
+
+    return 4 * pi;
+}
+
+int main() {
+    int numTermos;
+
+    // Solicita ao usuário o número de termos para calcular π
+    std::cout << "Digite o número de termos para calcular π: ";
+    std::cin >> numTermos;
+
+    // Calcula o valor de π usando a fórmula de Leibniz
+    double pi = calcularPi(numTermos);
+
+    // Exibe o valor aproximado de π
+    std::cout << "Valor aproximado de π com " << numTermos << " termos: " << pi << std::endl;
 
     return 0;
 }
