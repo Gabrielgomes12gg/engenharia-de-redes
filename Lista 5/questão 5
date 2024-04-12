@@ -1,1 +1,36 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
 
+int main() {
+    srand(time(nullptr));
+
+    char jogarNovamente;
+    do {
+        int numeroSecreto = rand() % 1000 + 1;
+        int palpite;
+        cout << "Eu tenho um número entre 1 e 1000." << endl;
+        cout << "Você consegue adivinhar o meu número?" << endl;
+
+        do {
+            cout << "Digite seu palpite: ";
+            cin >> palpite;
+
+            if (palpite == numeroSecreto) {
+                cout << "Excelente! Você adivinhou o número!" << endl;
+            } else if (palpite < numeroSecreto) {
+                cout << "Muito baixo. Tente novamente." << endl;
+            } else {
+                cout << "Muito alto. Tente novamente." << endl;
+            }
+        } while (palpite != numeroSecreto);
+
+        cout << "Você gostaria de jogar novamente (s ou n)? ";
+        cin >> jogarNovamente;
+    } while (jogarNovamente == 's');
+
+    cout << "Obrigado por jogar! Adeus." << endl;
+
+    return 0;
+}
