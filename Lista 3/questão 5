@@ -1,1 +1,27 @@
+#include <iostream>
 
+int main() {
+    char caractere;
+
+    // Solicita ao usuário que insira um caractere
+    std::cout << "Digite um caractere: ";
+    std::cin >> caractere;
+
+    // Converte o caractere para minúsculo para facilitar a comparação
+    caractere = tolower(caractere);
+
+    // Verifica se o caractere é uma vogal usando a estrutura switch case
+    switch (caractere) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            std::cout << "O caractere '" << caractere << "' é uma vogal.\n";
+            break;
+        default:
+            std::cout << "O caractere '" << caractere << "' não é uma vogal.\n";
+    }
+
+    return 0;
+}
