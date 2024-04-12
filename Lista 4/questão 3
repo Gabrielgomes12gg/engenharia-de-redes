@@ -1,1 +1,25 @@
+#include <iostream>
 
+double calcularE(int numTermos) {
+    double e = 1.0;
+    double termo = 1.0;
+
+    for (int i = 1; i <= numTermos; ++i) {
+        termo /= i;
+        e += termo;
+    }
+
+    return e;
+}
+
+int main() {
+    int numTermos = 10; // Aproximação usando os primeiros 10 termos
+
+    // Calcula o valor de e usando a série até 10 termos
+    double e = calcularE(numTermos);
+
+    // Exibe o valor aproximado de e
+    std::cout << "Valor aproximado de e com " << numTermos << " termos: " << e << std::endl;
+
+    return 0;
+}
