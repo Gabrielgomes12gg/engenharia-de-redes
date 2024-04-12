@@ -1,1 +1,14 @@
+#include <iostream>
+using namespace std;
 
+double celsius_para_fahrenheit(double celsius) {
+    double fahrenheit = (celsius * 9/5) + 32;
+    return fahrenheit;
+}
+
+int main() {
+    double temperatura_celsius = 20;
+    double temperatura_fahrenheit = celsius_para_fahrenheit(temperatura_celsius);
+    cout << "A temperatura " << temperatura_celsius << " graus Celsius equivale a " << temperatura_fahrenheit << " graus Fahrenheit." << endl;
+    return 0;
+}
