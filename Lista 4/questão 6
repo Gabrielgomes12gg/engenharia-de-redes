@@ -1,1 +1,45 @@
+#include <iostream>
+#include <cstdlib> // Para a função rand
+#include <ctime>   // Para a função time
 
+int main() {
+    // Inicializa a semente para geração de números aleatórios
+    std::srand(std::time(0));
+
+    // Variáveis para armazenar o número pensado pelo usuário e a resposta às perguntas
+    int numeroPensado;
+    char resposta;
+
+    // Solicita ao usuário que pense em um número entre 1 e 100
+    std::cout << "Pense em um número entre 1 e 100." << std::endl;
+
+    // Loop para fazer no máximo sete perguntas
+    int minimo = 1;
+    int maximo = 100;
+    for (int i = 1; i <= 7; ++i) {
+        // Adivinha um número aleatório dentro do intervalo atual
+        int palpite = minimo + std::rand() % (maximo - minimo + 1);
+
+        // Faz uma pergunta ao usuário
+        std::cout << "O número em que você está pensando é menor que " << palpite << "? (Responda s para sim, n para não): ";
+        std::cin >> resposta;
+
+        // Verifica a resposta do usuário
+        if (resposta == 's' || resposta == 'S') {
+            maximo = palpite - 1; // Atualiza o máximo para o palpite - 1
+        } else {
+            minimo = palpite; // Atualiza o mínimo para o palpite
+        }
+
+        // Verifica se o palpite é o número pensado
+        if (minimo == maximo) {
+            numeroPensado = minimo;
+            break; // Encerra o loop
+        }
+    }
+
+    // Exibe o número pensado pelo usuário
+    std::cout << "O número em que você estava pensando é: " << numeroPensado << std::endl;
+
+    return 0;
+}
