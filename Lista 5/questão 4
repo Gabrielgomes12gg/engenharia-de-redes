@@ -1,1 +1,49 @@
+#include <iostream>
+#include <cstdlib> // Incluir a biblioteca para usar rand() e srand()
+#include <ctime>
+using namespace std;
 
+// Função para gerar uma pergunta de multiplicação aleatória
+void gerar_pergunta(int& num1, int& num2, int& resposta_correta) {
+    // Gerar dois números inteiros positivos de um dígito
+    num1 = rand() % 9 + 1;
+    num2 = rand() % 9 + 1;
+    // Calcular a resposta correta
+    resposta_correta = num1 * num2;
+}
+
+// Função para verificar a resposta do aluno
+bool verificar_resposta(int resposta_aluno, int resposta_correta) {
+    // Verificar se a resposta está correta
+    if (resposta_aluno == resposta_correta) {
+        cout << "Muito bom!" << endl;
+        return true;
+    } else {
+        cout << "Não. Por favor, tente novamente." << endl;
+        return false;
+    }
+}
+
+int main() {
+    // Inicializar o gerador de números aleatórios
+    srand(time(nullptr));
+
+    cout << "Bem-vindo ao programa de aprendizado de multiplicação!" << endl;
+    
+    while (true) {
+        int num1, num2, resposta_correta;
+        // Gerar uma nova pergunta
+        gerar_pergunta(num1, num2, resposta_correta);
+        // Exibir a pergunta
+        cout << "Quanto é " << num1 << " vezes " << num2 << "?" << endl;
+        // Obter a resposta do aluno
+        int resposta_aluno;
+        cin >> resposta_aluno;
+        // Verificar se a resposta está correta
+        if (verificar_resposta(resposta_aluno, resposta_correta)) {
+            break; // Se a resposta estiver correta, sair do loop
+        }
+    }
+
+    return 0;
+}
