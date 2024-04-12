@@ -1,1 +1,24 @@
+#include <iostream>
 
+int main() {
+    double precoEtanol, precoGasolina;
+
+    // Solicita os preços do etanol e da gasolina
+    std::cout << "Digite o preço do litro de etanol: R$ ";
+    std::cin >> precoEtanol;
+
+    std::cout << "Digite o preço do litro de gasolina: R$ ";
+    std::cin >> precoGasolina;
+
+    // Calcula o custo relativo do etanol em relação à gasolina
+    double custoRelativo = precoEtanol / precoGasolina;
+
+    // Compara o custo relativo com 0.7 e exibe a recomendação
+    if (custoRelativo <= 0.7) {
+        std::cout << "Recomendação: Abasteça com etanol.\n";
+    } else {
+        std::cout << "Recomendação: Abasteça com gasolina.\n";
+    }
+
+    return 0;
+}
