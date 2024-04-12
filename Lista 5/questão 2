@@ -1,1 +1,115 @@
+Letra A:
 
+#include <iostream>
+using namespace std;
+
+bool eh_primo(int numero) {
+    // Números menores que 2 não são primos
+    if (numero <= 1) {
+        return false;
+    }
+
+    // Verifica se o número é divisível por algum número além de 1 e ele mesmo
+    for (int i = 2; i * i <= numero; i++) {
+        if (numero % i == 0) {
+            return false; // Se for divisível, não é primo
+        }
+    }
+
+    return true; // Se não for divisível por nenhum número além de 1 e ele mesmo, é primo
+}
+
+int main() {
+    int numero;
+    cout << "Digite um numero inteiro: ";
+    cin >> numero;
+
+    if (eh_primo(numero)) {
+        cout << numero << " eh primo." << endl;
+    } else {
+        cout << numero << " nao eh primo." << endl;
+    }
+
+    return 0;
+}
+Letra B: 
+#include <iostream>
+using namespace std;
+
+bool eh_primo(int numero) {
+    if (numero <= 1) {
+        return false;
+    }
+
+    for (int i = 2; i * i <= numero; i++) {
+        if (numero % i == 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+int main() {
+    cout << "Numeros primos entre 2 e 1000:" << endl;
+    for (int i = 2; i <= 1000; i++) {
+        if (eh_primo(i)) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+
+    return 0;
+}
+Letra C:
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+bool eh_primo_divisao_por_2(int numero) {
+    if (numero <= 1) {
+        return false;
+    }
+
+    for (int i = 2; i <= numero / 2; i++) {
+        if (numero % i == 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+bool eh_primo_raiz_quadrada(int numero) {
+    if (numero <= 1) {
+        return false;
+    }
+
+    for (int i = 2; i <= sqrt(numero); i++) {
+        if (numero % i == 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+int main() {
+    cout << "Numeros primos entre 2 e 1000 usando divisao por 2:" << endl;
+    for (int i = 2; i <= 1000; i++) {
+        if (eh_primo_divisao_por_2(i)) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+
+    cout << "Numeros primos entre 2 e 1000 usando raiz quadrada:" << endl;
+    for (int i = 2; i <= 1000; i++) {
+        if (eh_primo_raiz_quadrada(i)) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+
+    return 0;
+}
