@@ -1,1 +1,22 @@
+#include <iostream>
 
+int main() {
+    int numeroBinario, numeroDecimal = 0, digito, posicao = 1;
+
+    // Solicita ao usuário que insira o número binário
+    std::cout << "Digite um número binário: ";
+    std::cin >> numeroBinario;
+
+    // Converte o número binário para decimal
+    while (numeroBinario > 0) {
+        digito = numeroBinario % 10; // Obtém o último dígito do número binário
+        numeroDecimal += digito * posicao; // Adiciona o dígito à soma com sua posição correspondente
+        numeroBinario /= 10; // Remove o último dígito do número binário
+        posicao *= 2; // Multiplica a posição por 2 para a próxima iteração
+    }
+
+    // Imprime o valor decimal correspondente ao número binário
+    std::cout << "O valor decimal correspondente é: " << numeroDecimal << std::endl;
+
+    return 0;
+}
