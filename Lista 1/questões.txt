@@ -1,0 +1,89 @@
+QUESTÃO  
+Cpu- hardware
+Disco rigido- hardaware
+Progama word- software
+istragram- software
+teclado- hardaware
+QUESTÃO 2
+o software é responsavel por fazer a maquina compreender e exucuar os comandos do usuario,e eles auxiliam o usuário em diversas tarafes do cotidiano.
+QUESTÃO 3
+algoritimo é um um conjunto de isntruções bem definidas que ajuda a resolver questoes de matematica executar tarefas ou para realizar caluculos e equaçoes 
+QUESTÃO 4
+1 – Totvs.
+2 – iMedicina.
+3 – OnMed. 
+4 – Clínica nas nuvens.
+5 – iClinic. 
+6 – MDMED.
+7 – Ferramentas do google.
+QUESTÃO 5
+Google chrme
+WinRAR
+word
+-------
+nenhuma deixa minha vida mais complicada
+QUESTÃO 6 
+Diretamente envolvida
+QUESTÃO 7
+jogar jogos, estudar e outas coisas acossiadas a isso
+QUESTÃO 8
+Istagram, tik tok, word , WinRAR, Google e varios outros
+QUESTÃO 9
+Correr, comer, nadar, pescar, dormir,lutar,convensar,brincar, escrever em um papel e conzinhar
+QUESTÃO 10
+acho que não ira acabar, pois a IA tem que ser progamada por alguma pessoa, e quando ela quebrar alguem tera que consertar
+QUESTÃO 11
+1 tera de armazenamento, 16 gigas de memoria ram, e um processador i7 de 11* geraçao 
+QUESTÃO 12 
+Passo 1: Cruz na Primeira Camada
+Escolha uma cor (geralmente o branco) e faça uma cruz na face dessa cor.
+Certifique-se de que as bordas da cruz estejam alinhadas com as cores dos centros adjacentes.
+Passo 2: Montar os Cantos da Primeira Camada
+Encontre um canto que tenha a cor escolhida e posicione-o abaixo do lugar onde deve ficar.
+Use a sequência R U R' U' para posicionar o canto corretamente.
+Repita até todos os cantos da primeira camada estarem corretos.
+Passo 3: Cruz na Segunda Camada
+Concentre-se nas bordas da camada do meio.
+Se uma borda estiver na camada superior, use as seguintes manobras para movê-la:
+Se a borda estiver na posição correta, use U R U' R' U' F' U F para movê-la para o meio.
+Se a borda estiver fora de posição, use F R U R' U' F' para colocá-la na camada correta.
+Passo 4: Cruz na Última Camada
+Faça uma cruz na última camada (geralmente amarela).
+Use a sequência F R U R' U' F' até que todas as bordas estejam na posição correta.
+Passo 5: Alinhar as Bordas da Última Camada
+Certifique-se de que as bordas da cruz estejam alinhadas.
+Se não estiverem, use a sequência R U R' U R U2 R' para ajustá-las.
+Passo 6: Posicionar os Cantos da Última Camada
+Use a sequência U R U' L' U R' U' L para posicionar os cantos.
+Repita até todos os cantos estiverem na posição correta, mesmo que não estejam orientados.
+Passo 7: Orientar os Cantos da Última Camada
+Para cada canto que precisar ser orientado, posicione-o na frente direita e use a sequência R U R' U' até que esteja orientado.
+Repita para todos os cantos.
+QUESTÃO 13
+Um bit é um valor que pode ser 1 ou 0, um byte é uma sequência de bits que pode ter o tamanho máximo de 8 dígitos.
+QUESTÃO 14
+A representação de números reais em binário envolve converter tanto a parte inteira quanto a parte fracionária separadamente e combiná-las em um único número binário, frequentemente utilizando a notação de ponto flutuante para aplicações em computação.
+QUESTÃO 15
+Divisão por 2: Comece dividindo o número por 2 e anote o quociente e o resto.
+Registro dos restos: O resto da divisão será um dos dígitos do número binário. Continue dividindo o quociente por 2 e anotando os restos até que o quociente seja 0.
+Leitura dos restos: Os restos devem ser lidos na ordem inversa (do último para o primeiro) para formar o número binário.
+QUESTÃO 16
+ Scrum Master
+Facilitador: O Scrum Master é responsável por garantir que o Scrum seja entendido e aplicado corretamente. Ele facilita as cerimônias do Scrum, como as reuniões diárias (Daily Standups), revisões e retrospectivas.
+ Scrum Master
+Dono do Produto
+Responsável pelo backlog: O Dono do Produto é responsável por criar, priorizar e manter o backlog do produto, garantindo que ele reflita as necessidades dos stakeholders e os objetivos do negócio.
+QUESTÃO 17
+1. Mover arquivos
+Comando: move
+Uso: Para mover arquivos ou renomeá-los.
+2. Copiar arquivos
+Comando: copy
+Uso: Para copiar arquivos.
+3. Remover arquivos
+Comando: del
+Uso: Para remover arquivos.
+QUESTÃO 18
+IEEE ela estabelece padrões pela internet e para a comuniçao das pessoas
+
+
